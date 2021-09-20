@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import { title, paragraf } from './styled'
 import { Container } from '../../styles/globalstyles';
 import axios from '../../services/axios';
+import * as exampleActions from '../../store/modules/example'
 
 function Login() {
   const dispatch = useDispatch()
@@ -19,10 +20,7 @@ function Login() {
   function handleClick(e) {
     e.preventDefault()
 
-    dispatch({
-      type: 'BOTAO CLICADO',
-      payload: 'dados... com diciioonarioo'
-    })
+    dispatch(exampleActions.clicaBotao())
   }
 
   return (

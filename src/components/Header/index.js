@@ -6,7 +6,7 @@ import { Nav } from './styled'
 
 export default function Header() {
   const botaoClicado = useSelector(state => {
-    return state.botaoClicado
+    return state.example.botaoClicado
   })
   return (
     <Nav>
