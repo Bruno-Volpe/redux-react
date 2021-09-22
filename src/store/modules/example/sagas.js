@@ -3,8 +3,8 @@ import { toast } from 'react-toastify'
 import * as actions from './actions'
 import * as types from '../types'
 
-const require = () =>
-  new Promise((resolve, reject) => {
+const required = () =>
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve()
     }, 2000)
@@ -12,7 +12,7 @@ const require = () =>
 
 function* exampleRequest() {
   try {
-    yield call(require)
+    yield call(required)
     yield put(actions.clicaBotaoSucess())
   } catch (e) {
     toast.error('Ops :(, tente novamente mais tarde...s')

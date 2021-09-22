@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { title, paragraf } from './styled'
 import { Container } from '../../styles/globalstyles';
 import axios from '../../services/axios';
-import * as exampleActions from '../../store/modules/example'
+import * as exampleActions from '../../store/modules/example/actions'
 
 function Login() {
   const dispatch = useDispatch()
